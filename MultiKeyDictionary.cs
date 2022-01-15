@@ -2,13 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 
 namespace Tjx.MultiKeyDictionary
 {
     public static class Factory
     {
-
+              
         public static IDictionary ToMultiKeyDictionary<TSource, TSecKey>(this IEnumerable<TSource> source, params Func<TSource, TSecKey>[] func)
         {
             Dictionary<int, Type> reverseCollection = new Dictionary<int, Type>();
